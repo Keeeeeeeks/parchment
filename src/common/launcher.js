@@ -11,7 +11,8 @@ https://github.com/curiousdannii/parchment
 
 import {fetch_storyfile, fetch_vm_resource} from './file.js'
 import formats from './formats.js'
-import GlkOte from '../upstream/glkote/glkote.js'
+//import GlkOte from '../upstream/glkote/glkote.js'
+const GlkOte = window.GlkOte
 
 const default_options = {
     lib_path: 'dist/web/',

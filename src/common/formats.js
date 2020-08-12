@@ -11,14 +11,15 @@ https://github.com/curiousdannii/parchment
 
 import Dialog from '../upstream/glkote/dialog.js'
 import Glk from '../upstream/glkote/glkapi.js'
-import GlkOte from '../upstream/glkote/glkote.js'
+//import GlkOte from '../upstream/glkote/glkote.js'
+const GlkOte = window.GlkOte
 
 async function generic_emglken_vm(options, requires)
 {
     const [file_data, engine, wasmBinary] = requires
 
     const vm_options = Object.assign({}, options, {
-        Dialog,
+        Dialog: Dialog.Dialog,
         Glk: {},
         GlkOte,
         wasmBinary,
